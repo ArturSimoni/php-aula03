@@ -13,6 +13,7 @@ services:
     command: >
      bash -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
 
+
   mysql:
     image: mysql:8.0
     environment:
@@ -41,3 +42,10 @@ volumes:
 
 networks:
   php-network:
+
+composer:
+  image: composer:2
+  volumes:
+  - .laravel:/app
+  networks:
+  - php.network

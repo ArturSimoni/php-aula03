@@ -16,7 +16,7 @@ $stmt = $conn->prepare($query);
 $result = $stmt->execute();
 
 $pessoas = [
-    ['nome' => 'João', 'idade' => 30],
+    ['nome' => $nome, 'idade' =>$idade],
 ];
 }
 ?>
